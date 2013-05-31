@@ -12,19 +12,24 @@ module Codebreaker
 
     def check
       hash = Hash.new(0)
-      @code.each_char {|char| hash[char]}
+      @code.each_char {|char| hash[char] = char}
       array = hash.map {|key,value| key }
       result = ""
       4.times do |val|
-        result += "+" if  @code[val] == @string[val]
-        result += "-" if array.include?(@string[val])
+         
+        if  @code[val] == @guess[val]
+          result += "+"
+        elsif  array.include?(@guess[val])
+           result += "-"
+        end
+       
           
       end
       result
     end
     def enter_guess(string)
       return "incorrect data" if (string.length != 4) or (string =~ /\D|[7890]/)
-      guess = string
+      @guess = string
     end
   end
 end
