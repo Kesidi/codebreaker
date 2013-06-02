@@ -1,9 +1,0 @@
-Vova
- attemps - 10
-Vova
- Codebreaker you lose! Secret code - 6516 with attemps - 10
-vova
- Codebreaker you win! with attemps - 4
-vasy
- true with attemps - 5
-vov victoty:'true' with attemps - 6
