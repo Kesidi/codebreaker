@@ -1,4 +1,0 @@
-require './game.rb'
-
-game = CodeBreaker::Game.new($stdout, $stdin)
-game.start
